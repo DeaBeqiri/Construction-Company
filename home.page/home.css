@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #2d2f32;
+}
+.navbar{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+img{
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+}
+.list{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+#links{
+    text-decoration: none;
+    color: rgb(222, 254, 115);
+    font-size: 15px;
+}
