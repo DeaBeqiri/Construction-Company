@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(120deg, #08080d 0%, #12131c 40%, #1c1d29 100%);
+    color: white;
+    padding: 0 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.contacts-header {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+
+.logo h1 {
+    color: orange;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 70px;
+}
+.navigation-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navigation-links a:hover {
+    color: orange;
+    transition: color 0.3s ease;
+}
+
+#contacts-linkID {
+    color: orange;
+    padding: 5px 10px;
+    border: 2px solid orange;
+    border-radius: 20px;
+}
+
+#contacts-linkID:hover {
+    background-color: orange;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.contacts-main {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+.contact-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #1a1a24;
+    padding: 50px;
+    border-radius: 10px;
+    width: 750px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-card h2 {
+    padding-bottom: 20px;
+    font-size: 32px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 650px;
+    padding-top: 30px;
+}
+
+.form-input, .form-textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #262630;
+    max-width: 650px;
+    color: white;
+    resize: none;
+}
+
+.submit-button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: darkorange;
+    transition: background-color 0.3s ease;
+}
+
+.contacts-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    font-size: 14px;
+    color: #aaa;
+}
+
+#copyrightID {
+    margin-top: 5px;;
+}
+
+.address-section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.address-section strong {
+    color: orange;
+}   

@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
+    <title>Construction Company | Contacts</title>
+    <link rel="stylesheet" href="./contacts.css">
 </head>
 <body>
     <header class="contacts-header">
         <div class="logo">
-            <h2>Construction Company</h2>
+            <h1>Construction Company</h1>
         </div>
 
         <nav class="navigation">
             <ul>
-                <li class="navigation-links"><a href="#">Homepage</a></li>
-                <li class="navigation-links"><a href="#">Projects</a></li>
-                <li class="navigation-links"><a href="#">About Us</a></li>
-                <li class="navigation-links"><a href="#">Contacts</a></li>
+                <li class="navigation-links"><a id="home-linkID" href="#">Home</a></li>
+                <li class="navigation-links"><a id="projects-linkID" href="#">Projects</a></li>
+                <li class="navigation-links"><a id="services-linkID" href="#">Services</a></li>
+                <li class="navigation-links"><a id="aboutUs-linksID" href="#">About Us</a></li>
+                <li class="navigation-links"><a id="contacts-linkID" href="#">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="contacts-main">
-        <section class="contact-container">
+        <section class="contact-card">
             <h2>Contact Form</h2>
             <p>For any questions, requests or consultations regarding our projects, please contact us.</p>
 
@@ -30,7 +32,7 @@
                 <input class="form-input" type="text" name="name" placeholder="Name" required>
                 <input class="form-input" type="email" name="email" placeholder="Email" required>
                 <input class="form-input" type="text" name="Subject" placeholder="Subject" required>
-                <input class="form-input" type="text" name="Phone" placeholder="Phone" required>
+                <input class="form-input" type="tel" name="Phone" placeholder="Phone" required>
                 <textarea class="form-input" name="mesazhi" placeholder="Your message" rows="5" required></textarea>
                 <button class="submit-button" type="submit">Submit</button>
             </form>
@@ -43,7 +45,7 @@
         <p><strong>Email:</strong> info@construction_company.com</p>
         <p><strong>Location:</strong> Rr. Agim Ramadani, Prishtinë</p>
         </address>
-        <p>&copy; 2024 Construction Company. All rights reserved.</p>
+        <p id="copyrightID">&copy; 2025 Construction Company. All rights reserved.</p>
 
     </footer>
 </body>
