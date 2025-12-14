@@ -7,15 +7,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-document.querySelectorAll(".worker-img, .bottom-img").forEach((img) => {
-  img.addEventListener("mouseover", () => {
-    img.style.transform = "scale(1.03)";
-  });
-  img.addEventListener("mouseout", () => {
-    img.style.transform = "scale(1)";
-  });
-});
-
 const hamburger = document.querySelector(".hamburger");
 
 const navMenu = document.querySelector("header nav");
