@@ -3,53 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects – Construction Company</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Projects</title>
+    <link rel="icon" type="image/x-icon" href="Images/Logo.png">
+    <link rel="stylesheet" href="projects.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="logo">
-            <h2>Construction Company</h2>
-        </div>
-
-        <nav class="navigation">
-            <ul>
-                <li><a href="index.html">Homepage</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-            </ul>
-        </nav>
+    <header id="navbar">
+      <div class="logo">
+        <a href="#section-main">
+          <img src="Images/Logo.png" alt="" />
+        </a>
+      </div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About us</a>
+        <a href="#" class="current">Projects</a>
+        <a href="#">Services</a>
+        <a href="#">Our Team</a>
+        <a class="contact-btn" href="#">Contact us</a>
+      </nav>
     </header>
 
-    <main class="container">
+    <section id="main">
         <h1>Our Projects</h1>
 
-        <div class="projects-grid">
+        <div class="project-grid">
             <article class="project-card">
-                <img src="project1.jpg" alt="Modern commercial office building" class="project-image">
+                <img src="#" alt="Building 1" class="project-image">
                 <div class="project-info">
-                    <h3>Commercial Building</h3>
-                    <p>Modern office complex with sustainable design features.</p>
+                    <h3>Building 1</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </article>
 
             <article class="project-card">
-                <img src="project2.jpg" alt="Downtown residential complex" class="project-image">
+                <img src="#" alt="Building 2" class="project-image">
                 <div class="project-info">
-                    <h3>Residential Complex</h3>
-                    <p>Multi-family residential development in the downtown area.</p>
+                    <h3>Building 2</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </article>
-
+            
             <article class="project-card">
-                <img src="project3.jpg" alt="Infrastructure renovation project" class="project-image">
+                <img src="#" alt="Building 3" class="project-image">
                 <div class="project-info">
-                    <h3>Infrastructure Renovation</h3>
-                    <p>Complete overhaul of city infrastructure and utilities.</p>
+                    <h3>Building 3</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </article>
         </div>
-    </main>
+    </section>
+    
+    <footer>
+      <div class="footer-section">
+        <h2 class="footer-logo">Urban build</h2>
+
+        <p class="footer-text">
+          We build high - quality industrial, commercial and residential
+          structures with passion and precision.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-title">Quick Links</h3>
+        <a href="#" class="footer-link">Home</a>
+        <a href="#" class="footer-link">Projects</a>
+        <a href="#" class="footer-link">Services</a>
+        <a href="#" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-title">Contact Info</h3>
+        <p class="footer-tetx">Prishtine, Kosova</p>
+        <p class="footer-text">+383 49 556 334</p>
+        <p class="footer-text">info@urbanbuild.com</p>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-title">Follow us</h3>
+        <p class="footer-text">Facebook</p>
+        <p class="footer-text">Instagram</p>
+        <p class="footer-text">LinkedIn</p>
+      </div>
+    </footer>
 </body>
 </html>
