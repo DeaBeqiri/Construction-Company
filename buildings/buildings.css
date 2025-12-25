@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0b0c14, #131423);
+  background-blend-mode: overlay;
+  overflow-x: hidden;
+  background-image: url(images/foto2.jpeg);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: black;
+  padding: 10px 40px;
+  transition: 0.3s ease;
+}
+.current {
+  padding: 10px 20px;
+  border: 1px solid #ff7a29;
+  border-radius: 20px;
+  color: #ff7a29;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-right: 20px;
+}
+.current:hover {
+  background-color: #ff7a29;
+  color: white;
+}
+.logo img {
+  width: 120px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+header.scrolled {
+  background: black;
+  padding: 8px 40px;
+}
+header.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+nav a {
+  margin: 0 10px;
+  padding-right: 35px;
+  color: #ff7a29;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: white;
+}
+
+main {
+  padding: 120px 40px 60px;
+  text-align: center;
+}
+
+.pagename {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0;
+  text-align: left;
+}
+.pagename h1 {
+  font-size: clamp(32px, 6vw, 58px);
+  margin: 0;
+  line-height: 1.1;
+  color: black;
+  text-align: left;
+}
+.pagename p {
+  margin-top: 20px;
+  max-width: 450px;
+  color: gray;
+  line-height: 1.6;
+  text-align: left;
+}
+
+
+#image-gallery {
+  position: relative;
+  max-width: 1200px;
+  margin: 40px 0;
+}
+
+#image-gallery img {
+  cursor: pointer;
+}
+
+#image-gallery::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 6px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0,0,0,0) 55%,
+    rgba(0,0,0,0.35) 100%
+  );
+}
+
+#image-gallery:hover::after {
+  opacity: 1;
+}
+
+#image-gallery img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: none;
+  border-radius: 6px;
+}
+#image-gallery {
+  position: relative;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+#image-gallery .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  border: none;
+  font-size: 32px;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#image-gallery .arrow:hover {
+  background: rgba(0, 0, 0, 0.85);
+  transform: translateY(-50%) scale(1.05);
+}
+
+#image-gallery .arrow.left {
+  left: 12px;
+}
+
+#image-gallery .arrow.right {
+  right: 12px;
+}
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 2000;
+}
+
+#lightbox.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+#lightbox .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.25);
+  color: white;
+  border: none;
+  font-size: 40px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s, transform 0.2s;
+  z-index: 2100;
+}
+
+#lightbox .arrow:hover {
+  background: rgba(255,255,255,0.6);
+  transform: translateY(-50%) scale(1.1);
+}
+
+#lightbox .arrow.left { left: 20px; }
+#lightbox .arrow.right { right: 20px; }
+
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+footer {
+  margin-top: 120px;
+  padding: 60px;
+  background: #0f101a;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 1px solid #242532;
+}
+.footer-section {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+.footer-logo {
+  color: #ff7a29;
+  margin-bottom: 10px;
+}
+.footer-title {
+  color: #ff7a29;
+  margin-bottom: 10px;
+}
+.footer-text {
+  color: #aaaa;
+  line-height: 1.6;
+  margin: 6px 0;
+}
+.footer-link {
+  color: #aaaa;
+  text-decoration: none;
+  display: block;
+  margin: 6px 0;
+}
+.footer-link:hover {
+  color: #ff7a29;
+}
