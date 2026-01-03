@@ -1,26 +1,36 @@
-/*JavaScript per funksionalitetin e faqes se projekteve me JQuery*/
+$(document).ready(function () {
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
 
-$(document).ready(function() {
-  const maxScroll = 200;
+  const hamburger = document.querySelector(".hamburger");
 
-  /* Animacioni i headerit */
-  $(window).scroll(function() {
-    const progress = Math.min($(window).scrollTop() / maxScroll, 1);
-    $('header').css({
-      transform: `translateY(-${progress * 100}%)`,
-      opacity: 1 - progress
+  const navMenu = document.querySelector("header nav");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    hamburger.classList.toggle("open");
+  });
+
+  document.querySelectorAll("header nav a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      hamburger.classList.remove("open");
     });
   });
 
-  /* Menuja hamburger */
-  $('.hamburger').click(function() {
-    $(this).toggleClass('active');
-    $('.nav-menu').toggleClass('active');
+  $(".hamburger").click(function () {
+    $(this).toggleClass("active");
+    $(".nav-menu").toggleClass("active");
   });
 
-  /* Mbyllja e menuse kur klikohet nje link */
-  $('.nav-menu a').click(function() {
-    $('.hamburger').removeClass('active');
-    $('.nav-menu').removeClass('active');
+  $(".nav-menu a").click(function () {
+    $(".hamburger").removeClass("active");
+    $(".nav-menu").removeClass("active");
   });
 });

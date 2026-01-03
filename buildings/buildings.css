@@ -1,79 +1,70 @@
-/* Stilet e Perbashkta per krejt faqen*/
-body { 
+body {
   margin: 0;
   font-family: Arial, sans-serif;
   overflow-x: hidden;
 
   background: linear-gradient(135deg, #0b0c14, #131423);
-  background-attachment: fixed;  
+  background-attachment: fixed;
   background-blend-mode: overlay;
   background-image: url(images/foto2.jpeg);
 }
 
-/* Headeri dhe efectet e tij*/
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 10px 40px;
-  background: black;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: transparent;
   transition: 0.3s ease;
 }
-
 header.scrolled {
-  padding: 8px 40px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  padding-bottom: 12px;
 }
-
-header.hide {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
 .logo img {
   width: 120px;
   margin-right: 10px;
   cursor: pointer;
 }
-
 nav a {
-  margin: 0 10px;
-  padding-right: 35px;
-
-  font-size: 15px;
+  margin: 0 20px;
   color: #ff7a29;
   text-decoration: none;
+  font-size: 15px;
   transition: 0.3s;
 }
-
 nav a:hover {
   color: white;
 }
-
-/* Hijezimi i veqant per linkun e kontaktit */
-.contact {
-  margin-right: 20px;
+.contact-btn {
   padding: 10px 20px;
-
   border: 1px solid #ff7a29;
   border-radius: 20px;
-
   color: #ff7a29;
   text-decoration: none;
   transition: 0.3s;
+  margin-right: 20px;
 }
-
-.contact:hover {
+.contact-btn:hover {
   background-color: #ff7a29;
   color: white;
 }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-right: 50px;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
 
-/* Titulli i faqes */
 main {
   padding: 130px 40px 40px;
   text-align: center;
@@ -93,8 +84,7 @@ main {
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.08);
 
-  box-shadow:
-    0 14px 40px rgba(0, 0, 0, 0.55),
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55),
     inset 0 0 0 1px rgba(255, 255, 255, 0.02);
 }
 
@@ -106,7 +96,6 @@ main {
   letter-spacing: 0.4px;
 }
 
-/* Galeria e imazheve */
 #image-gallery {
   position: relative;
   max-width: 1200px;
@@ -121,24 +110,23 @@ main {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.08);
 
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 
   overflow: hidden;
   transition: transform 0.5s ease-in-out;
 }
 
-/* Slideri i imazheve*/
 #image-gallery .slider-track {
   display: flex;
   transition: transform 0.6s ease-in-out;
   width: 100%;
 }
 
-/* Imazhet ne Slider */
 #image-gallery .slider-track img {
-  display: block;         
+  display: block;
   flex-shrink: 0;
-  flex-basis: 100%;      
+  flex-basis: 100%;
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
@@ -169,7 +157,6 @@ main {
   opacity: 0.6;
 }
 
-/* Shigjetat per navigimin ne slider */
 #image-gallery .arrow {
   position: absolute;
   top: 0;
@@ -193,10 +180,13 @@ main {
   color: #ff7a29;
 }
 
-#image-gallery .arrow.left { left: 0; }
-#image-gallery .arrow.right { right: 0; }
+#image-gallery .arrow.left {
+  left: 0;
+}
+#image-gallery .arrow.right {
+  right: 0;
+}
 
-/* Lightbox per shikimin ne fullscreen */
 #lightbox {
   position: fixed;
   inset: 0;
@@ -206,7 +196,7 @@ main {
   align-items: center;
   justify-content: center;
 
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
   cursor: zoom-out;
 
   opacity: 0;
@@ -226,7 +216,6 @@ main {
   border-radius: 6px;
 }
 
-/* Shigjetat per navigim ne lightbox */
 #lightbox .arrow {
   position: absolute;
   top: 0;
@@ -250,10 +239,13 @@ main {
   color: #ff7a29;
 }
 
-#lightbox .arrow.left { left: 0; }
-#lightbox .arrow.right { right: 0; }
+#lightbox .arrow.left {
+  left: 0;
+}
+#lightbox .arrow.right {
+  right: 0;
+}
 
-/* Teksti anash galerise */
 .gallery-container {
   display: flex;
   gap: 40px;
@@ -269,7 +261,7 @@ main {
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6),
-  inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
 .gallery-text h2 {
@@ -308,7 +300,6 @@ main {
   transform: translateY(-2px);
 }
 
-/* Teksti anash galerise per mobile */
 @media (max-width: 900px) {
   .gallery-container {
     flex-direction: column;
@@ -319,7 +310,7 @@ main {
     max-width: 100%;
   }
 }
-/* Pjesa e hartes */
+
 .map-section {
   width: 100%;
   display: flex;
@@ -343,8 +334,7 @@ main {
 
   border: 1px solid rgba(255, 255, 255, 0.08);
 
-  box-shadow:
-    0 25px 60px rgba(0, 0, 0, 0.6),
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6),
     inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 
   overflow: hidden;
@@ -368,7 +358,6 @@ main {
   opacity: 0.6;
 }
 
-/* Footeri */
 footer {
   margin-top: 120px;
   padding: 60px;
@@ -410,7 +399,6 @@ footer {
   color: #ff7a29;
 }
 
-/* Menuja hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -433,7 +421,6 @@ footer {
 
 /* Responsive per mobile */
 @media (max-width: 768px) {
-
   .hamburger {
     display: flex;
   }

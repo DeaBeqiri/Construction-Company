@@ -9,34 +9,41 @@ window.addEventListener("scroll", () => {
   }
 });
 
+const hamburger = document.querySelector(".hamburger");
 
+const navMenu = document.querySelector("header nav");
 
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  hamburger.classList.toggle("open");
+});
 
+document.querySelectorAll("header nav a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    hamburger.classList.remove("open");
+  });
+});
 
 //LEAFLET MAP
 
-var map = L.map('map').setView([42.64881601977948, 21.16718912832117], 16);
+var map = L.map("map").setView([42.64881601977948, 21.16718912832117], 16);
 
 // Add OpenStreetMap tiles
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
 // Add marker with popup
-L.marker([42.64881601977948, 21.16718912832117]).addTo(map)
-    .bindPopup('Urban Build Office')
-    .openPopup();
-
-
-
-
-
-
+L.marker([42.64881601977948, 21.16718912832117])
+  .addTo(map)
+  .bindPopup("Urban Build Office")
+  .openPopup();
 
 //CONTACT FORM VALIDATION
 
 $(document).ready(function () {
-
   $(".contact-form").on("submit", function (e) {
     e.preventDefault();
 
@@ -102,9 +109,7 @@ $(document).ready(function () {
       }
     }
   });
-
 });
-
 
 // SHAKE FUNCTION
 
