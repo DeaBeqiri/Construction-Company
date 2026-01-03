@@ -1,165 +1,340 @@
+/* Stili global per të gjitha elementet */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #0b0c14, #131423);
-  background-blend-mode: overlay;
   overflow-x: hidden;
+
+  background: linear-gradient(135deg, #0b0c14, #131423);
+  background-attachment: fixed;
+  background-blend-mode: overlay;
   background-image: url(images/foto2.jpeg);
 }
 
+/* Headeri dhe navigimi */
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  background: black;
+
   padding: 10px 40px;
+  background: black;
   transition: 0.3s ease;
 }
-.current {
-  padding: 10px 20px;
-  border: 1px solid #ff7a29;
-  border-radius: 20px;
-  color: #ff7a29;
-  text-decoration: none;
-  transition: 0.3s;
-  margin-right: 20px;
+
+header.scrolled {
+  padding: 8px 40px;
 }
-.current:hover {
-  background-color: #ff7a29;
-  color: white;
+
+header.hide {
+  transform: translateY(-100%);
+  opacity: 0;
 }
+
 .logo img {
   width: 120px;
   margin-right: 10px;
   cursor: pointer;
 }
-header.scrolled {
-  background: black;
-  padding: 8px 40px;
-}
-header.hide {
-  transform: translateY(-100%);
-  opacity: 0;
-}
+
 nav a {
   margin: 0 10px;
   padding-right: 35px;
+
+  font-size: 15px;
   color: #ff7a29;
   text-decoration: none;
-  font-size: 15px;
   transition: 0.3s;
 }
+
 nav a:hover {
   color: white;
 }
 
+/* Butoni i kontaktit */
+.contact {
+  margin-right: 20px;
+  padding: 10px 20px;
+
+  border: 1px solid #ff7a29;
+  border-radius: 20px;
+
+  color: #ff7a29;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact:hover {
+  background-color: #ff7a29;
+  color: white;
+}
+
+/* Titulli i faqes dhe pershkrimi */
 #main {
   padding: 120px 40px 60px;
   text-align: center;
 }
+
 .pagename {
   padding: 20px;
   max-width: 800px;
   margin: 0;
   text-align: left;
 }
+
 .pagename h1 {
-  font-size: clamp(32px, 6vw, 58px);
   margin: 0;
   line-height: 1.1;
+  font-size: clamp(32px, 6vw, 58px);
   color: black;
-  text-align: left;
 }
+
 .pagename p {
   margin-top: 20px;
   max-width: 450px;
-  color: gray;
   line-height: 1.6;
-  text-align: left;
+  color: gray;
 }
 
+/* Renditja e projekteve */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  padding: 0 20px;
+
+  padding: 20px 20px;
   margin: 0 auto;
   box-sizing: border-box;
 }
+
+/* kartat per projekte */
 .project-card {
-  background-color: #000;
-  border-radius: 10px;
+  background: rgba(15, 16, 26, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.65),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
+
 .project-card img.project-image {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   width: 100%;
   height: 200px;
   object-fit: cover;
+  display: block;
 }
+
+/* informatat per projekt ne karte*/
 .project-info {
   padding: 20px;
   background: rgba(255, 255, 255, 0.05);
-  border-top: 2px solid #ff7a29;
+  border-top: 2px solid grey;
+  transition: background 0.3s;
 }
+
 .project-info:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+
 .project-info h3 {
-  margin-top: 0;
+  margin: 0 0 15px;
   font-size: 24px;
-  margin-bottom: 15px;
-  color: #ff7a29;
   font-weight: 600;
-}
-.project-info p {
-  font-size: 14px;
-  color: #cccccc;
-  line-height: 1.6;
-  margin-bottom: 10px;
+  color: whitesmoke;
 }
 
+.project-info p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+/* Footeri */
 footer {
   margin-top: 120px;
   padding: 60px;
-  background: #0f101a;
+
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  background: #0f101a;
   border-top: 1px solid #242532;
 }
+
 .footer-section {
   max-width: 300px;
   margin-bottom: 20px;
 }
-.footer-logo {
-  color: #ff7a29;
-  margin-bottom: 10px;
-}
+
+.footer-logo,
 .footer-title {
-  color: #ff7a29;
   margin-bottom: 10px;
+  color: #ff7a29;
 }
+
 .footer-text {
-  color: #aaaa;
-  line-height: 1.6;
   margin: 6px 0;
-}
-.footer-link {
+  line-height: 1.6;
   color: #aaaa;
-  text-decoration: none;
+}
+
+.footer-link {
   display: block;
   margin: 6px 0;
+
+  color: #aaaa;
+  text-decoration: none;
 }
+
 .footer-link:hover {
   color: #ff7a29;
+}
+
+/* Responsive per mobile */
+@media (max-width: 768px) {
+
+  header {
+    padding: 10px 20px;
+  }
+
+  nav a {
+    padding-right: 15px;
+    font-size: 14px;
+  }
+
+  #main {
+    padding: 100px 20px 40px;
+  }
+
+  .pagename {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .pagename p {
+    max-width: 100%;
+  }
+
+  .project-grid {
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .project-card img.project-image {
+    height: 180px;
+  }
+
+  footer {
+    padding: 40px 20px;
+    flex-direction: column;
+  }
+
+  .footer-section {
+    max-width: 100%;
+  }
+}
+
+/* Mobile per ekrane me te vogla*/
+@media (max-width: 480px) {
+
+  nav a {
+    margin: 0 5px;
+    font-size: 13px;
+  }
+
+  .project-info h3 {
+    font-size: 20px;
+  }
+
+  .project-info p {
+    font-size: 13px;
+  }
+}
+
+/* Menuja hamburger*/
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 26px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+
+  background-color: #ff7a29;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Shfaqja dhe fshehja e menuse hamburger */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    width: 100%;
+    background: black;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px 0;
+  }
+
+  .nav-menu a {
+    padding: 15px 0;
+    font-size: 16px;
+  }
+
+  /* Toggle per JS*/
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
+/* Animacioni i menuse hamburger */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
 }

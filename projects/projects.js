@@ -1,13 +1,26 @@
-const header = document.querySelector('header');
-const maxScroll = 200; 
+/*JavaScript per funksionalitetin e faqes se projekteve me JQuery*/
 
-window.addEventListener('scroll', () => {
-  const scrollY = window.pageYOffset;
+$(document).ready(function() {
+  const maxScroll = 200;
 
-  let progress = Math.min(scrollY / maxScroll, 1);
+  /* Animacioni i headerit */
+  $(window).scroll(function() {
+    const progress = Math.min($(window).scrollTop() / maxScroll, 1);
+    $('header').css({
+      transform: `translateY(-${progress * 100}%)`,
+      opacity: 1 - progress
+    });
+  });
 
+  /* Menuja hamburger */
+  $('.hamburger').click(function() {
+    $(this).toggleClass('active');
+    $('.nav-menu').toggleClass('active');
+  });
 
-  header.style.transform = `translateY(-${progress * 100}%)`;
-
-  header.style.opacity = `${1 - progress}`;
+  /* Mbyllja e menuse kur klikohet nje link */
+  $('.nav-menu a').click(function() {
+    $('.hamburger').removeClass('active');
+    $('.nav-menu').removeClass('active');
+  });
 });

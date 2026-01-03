@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Building Project</title>
+    <link rel="icon" href="../projects/Images/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="buildings.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+      body {
+        background-image: url("Building1/Building1_2.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-blend-mode: overlay;
+        min-height: 100vh;
+      }
+</style>
 </head>
 <body>
-
     <header id="navbar">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div class="logo">
         <a href="#section-main">
           <img src="Images/Logo.png" alt="" />
@@ -17,35 +35,52 @@
       <nav>
         <a href="home.html">Home</a>
         <a href="about.html">About us</a>
-        <a href="../projects/projects.html" class="current">Projects</a>
+        <a href="../projects/projects.html">Projects</a>
         <a href="services.html">Services</a>
         <a href="team.html">Our Team</a>
-        <a href="contact.html">Contact us</a>
+        <a href="contact.html" class="contact">Contact us</a>
       </nav>
     </header>
 
 
     <main>
         <div class="pagename">
-          <h1>Building1</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Accusamus recusandae explicabo natus itaque dolores culpa.</p>
+          <h1>Complex 1</h1>
         </div>
 
-        <section id="image-gallery">
-          <img src="Images/image1.jpg" alt="Building Image 1">
-          <img src="Images/image2.jpg" alt="Building Image 2">
-          <img src="Images/image3.jpg" alt="Building Image 3">
-          <img src="Images/image4.jpg" alt="Building Image 4">
-          <img src="Images/image5.jpg" alt="Building Image 5">
-        </section>
+        <div class="gallery-container">
+          <section id="image-gallery">
+            <div class="slider-track">
+              <img src="Building1/Building1.webp" alt="Building Image 1">
+              <img src="Building1/Building1_2.webp" alt="Building Image 2">
+              <img src="Building1/Building1_3.webp" alt="Building Image 3">
+              <img src="Building1/Building1_4.webp" alt="Building Image 4">
+              <img src="Building1/Building1_5.webp" alt="Building Image 5">
+            </div>
+          </section>
+
+          <div class="gallery-text">
+            <h2>About This Project</h2>
+            <p>
+              This modern apartment complex is designed to offer comfortable urban living with a focus on quality, functionality, and style.
+              The building features a clean architectural design with spacious, well-lit apartments that maximize natural light and provide an open, welcoming atmosphere.
+              Each unit is thoughtfully planned to ensure efficient use of space, modern finishes, and long-term comfort.
+            </p>
+            <p>
+              Beyond the individual residences, the complex fosters a sense of community through a curated suite of shared amenities.
+              Residents can enjoy a landscaped rooftop terrace offering panoramic city views, a state-of-the-art fitness center, and versatile co-working spaces designed for the modern professional.
+              Integrated smart-home technology and eco-friendly systems ensure that the building is not only convenient but also sustainable, meeting the demands of a fast-paced urban lifestyle while providing a peaceful retreat from the bustling streets below.
+            </p>
+            <a href="contact.html" class="contact-btn">Contact Us</a>
+          </div>
+        </div>
 
         <!-- Map -->
         <div class="pagename">
           <h1>On Map location</h1>
         </div>
-        <section id="map">
-
+        <section class="map-section">
+          <div id="map"></div>
         </section>
     </main>
 
@@ -68,7 +103,7 @@
       <div class="footer-section">
         <h3 class="footer-title">Quick Links</h3>
         <a href="#" class="footer-link">Home</a>
-        <a href="#" class="footer-link">Projects</a>
+        <a href="../projects/projects.html" class="footer-link">Projects</a>
         <a href="#" class="footer-link">Services</a>
         <a href="#" class="footer-link">Contact</a>
       </div>
