@@ -48,7 +48,7 @@ export default function ApplySection({
             type="tel"
             inputmode="numeric"
             pattern="[0-9]{6,15}"
-            placeholder="+383-44-123-456"
+            placeholder="044-123-456"
           />
 
           <label for="position">Position Applied For</label>
