@@ -319,7 +319,7 @@ z-index: 3;
     
  flex-direction: column;
  justify-content: center;
-    background: rgba(120,22,35,0.95);
+    background: rgba(198, 92, 0, 0.35);
     border: 1px solid rgba(255,170, 80, 0.28);
     backdrop-filter: none;
 
@@ -397,4 +397,44 @@ footer {
 }
 .footer-link:hover {
   color: #ff7a29;
+}
+
+@media(max-width:780px){
+
+    nav{
+        top: 80px;
+        left:-100%;
+        width:100%;
+        height:calc(100vh-80px);
+        background: rgba(0, 0, 0, 0.95);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+        transition: 0.3s;
+    }
+    nav.active{
+        left: 0;
+    }
+    .hamburger{
+        display: flex;
+    }
+    .home-content h1{
+        font-size: 2rem;
+    }
+
+    .hero-stats{
+        flex-wrap: wrap;
+        padding: 0 16px;
+    }
+    .hero-stats .hcard{
+        width: 100%;
+    }
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    footer{
+        flex-direction: column;
+        gap:30px;
+    }
 }
