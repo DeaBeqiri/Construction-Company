@@ -263,6 +263,7 @@ box-shadow: 0 10px 24px rgba(0,0,0,.45);
 .hero-cardi .buttonC:hover{
     background: #3b78ff;
     transform: translateY(-1px);
+    padding: 14px 26px;
 }
 
 
@@ -292,27 +293,34 @@ box-shadow: 0 10px 24px rgba(0,0,0,.45);
 .cards{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 14px;
+    gap: 24px;
 }
 
 .card{
     background:  var(--card);
     border: 1px solid var(--border);
     border-radius: 18px;
-    padding: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     box-shadow: var(--shadow);
 }
 
+.card p{
+    margin-top: 12px;
+    line-height: 1.5;
+}
 .card h3{margin-bottom: 6px;}
 
 .icon{
-    width: 42px;
-    height: 42px;
-    display: grid;
+    width: 44px;
+    height: 44px;
+    display: flex;
     place-items: center;
     border: 1px solid var(--border);
     border-radius: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     background: rgba(255,255,255,0.4);
 }
 
@@ -351,11 +359,45 @@ box-shadow: 0 10px 24px rgba(0,0,0,.45);
 }
 
 .steps{
-    margin-top: 10px;
+    margin-top: 20px;
     display: grid;
     gap: 10px;
     color: var(--pershkrimi);
     padding-left: 18px;
+    list-style: none;
+    padding: 0;
+    
+}
+
+.steps li{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+    font-size: 16px;
+    color:#e5e7eb ;
+}
+
+.steps li span{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #3b82f6;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    
+}
+
+.stats li :hover span{
+    background: #2563eb;
+    transform: scale(1.1);
+}
+
+
+.steps li span{
+    transition: 0.3s ease;
 }
 
 .steps span{
@@ -377,6 +419,7 @@ box-shadow: 0 10px 24px rgba(0,0,0,.45);
     border-radius: 18px;
     overflow: hidden;
     background: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.12);
 }
 
 .faqe-q{
@@ -393,7 +436,23 @@ box-shadow: 0 10px 24px rgba(0,0,0,.45);
      align-items: center;
      cursor: pointer;
      opacity: 0.9;
+     font-weight: 600;
      
+}
+
+.faq-item{
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+ 
+.faqQ{
+    background: transparent;
+    border: 0;
+    color:#cbd5e1;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    margin-top: 8px;
+    text-decoration: underline;
 }
 
 .faq-a{
