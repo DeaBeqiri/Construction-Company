@@ -1,0 +1,104 @@
+/* RESET I THJESHTË */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111111;
+  color: #f5f5f5;
+}
+
+/* SECTION SERVICES */
+.services-section {
+  padding: 60px 10%;
+  background-color: #111111;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-header h2 {
+  font-size: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffd500; /* e verdhë kryesore */
+}
+
+.services-header p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #dddddd;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  padding: 25px 20px;
+  border: 2px solid #ffd500; /* kontur i verdhë */
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.service-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #ffd500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.service-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ffd500;
+  text-transform: uppercase;
+}
+
+.service-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 15px;
+}
+
+.service-link {
+  display: inline-block;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #ffd500;
+  color: #ffd500;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  background-color: #202020;
+}
+
+/* RESPONSIVE NË MOBILE */
+@media (max-width: 600px) {
+  .services-section {
+    padding: 40px 5%;
+  }
+
+  .services-header h2 {
+    font-size: 26px;
+  }
+}
